@@ -1,0 +1,29 @@
+# Convert into allow list.
+*
+
+# Allow this list.
+!/.gitignore
+
+# Allow static assets.
+!/static/
+!/static/**/
+!/static/**/*.css
+!/static/**/*.css.map
+!/static/**/*.js
+!/static/**/*.js.map
+!/static/**/*.ttf
+!/static/**/*.woff2
+
+# Allow template files.
+!/layouts/
+!/layouts/**/
+!/layouts/**/*.html
+
+# Allow the license file.
+!/LICENSE
+
+# Allow the README file.
+!/README.md
+
+# Allow the plugin configuration file.
+!/plugin.json
