@@ -1,0 +1,82 @@
+{
+	"version": "2.0",
+	"title": "Micro Card 2",
+	"description": "A business card styled theme.",
+    "fields": [
+        {
+            "field": "params.behance",
+            "label": "Behance Profile URL",
+            "placeholder": "Your Behance profile URL"
+        },
+        {
+            "field": "params.discord",
+            "label": "Discord Profile URL",
+            "placeholder": "Your Discord profile URL"
+        },
+        {
+            "field": "params.dribbble",
+            "label": "Dribbble Profile URL",
+            "placeholder": "Your Dribbble profile URL"
+        },
+        {
+            "field": "params.facebook",
+            "label": "Facebook Profile URL",
+            "placeholder": "Your Facebook profile URL"
+        },
+        {
+            "field": "params.github",
+            "label": "GitHub Profile URL",
+            "placeholder": "Your GitHub profile URL"
+        },
+        {
+            "field": "params.gitlab",
+            "label": "GitLab Profile URL",
+            "placeholder": "Your GitLab profile URL"
+        },
+        {
+            "field": "params.instagram",
+            "label": "Instagram Profile URL",
+            "placeholder": "Your Instagram profile URL"
+        },
+        {
+            "field": "params.linkedin",
+            "label": "LinkedIn ProfileURL",
+            "placeholder": "Your LinkedIn profile URL"
+        },
+        {
+            "field": "params.mastodon",
+            "label": "Mastodon Profile URL",
+            "placeholder": "Your Mastodon profile URL"
+        },
+        {
+            "field": "params.soundcloud",
+            "label": "SoundCloud Profile URL",
+            "placeholder": "Your SoundCloud profile URL"
+        },
+        {
+            "field": "params.tiktok",
+            "label": "TikTok Profile URL",
+            "placeholder": "Your TikTok profile URL"
+        },
+        {
+            "field": "params.twitch",
+            "label": "Twitch Profile URL",
+            "placeholder": "Your Twitch profile URL"
+        },
+        {
+            "field": "params.twitter",
+            "label": "Twitter Profile URL",
+            "placeholder": "Your Twitter profile URL"
+        },
+        {
+            "field": "params.vimeo",
+            "label": "Vimeo Profile URL",
+            "placeholder": "Your Vimeo profile URL"
+        },
+        {
+            "field": "params.youtube",
+            "label": "YouTube Profile URL",
+            "placeholder": "Your YouTube profile URL"
+        }
+    ]
+}
