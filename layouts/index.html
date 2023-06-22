@@ -67,6 +67,7 @@
             </a>
           </li>
           {{ end }}
+          {{ with .Site.Params.github }}
           <li>
             <a href="{{ . }}" rel="me" target="_blank" title="GitHub" aria-label="My GitHub profile">
               <i class="fa-brands fa-github"></i>
