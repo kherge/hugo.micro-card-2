@@ -1,0 +1,151 @@
+:root {
+  --card-border-dark: rgb(0, 0, 0, 0.3);
+  --card-border-light: rgb(0, 0, 0, 0.1);
+  --card-color: #f7f7f7;
+}
+
+.business-card {
+  background-color: var(--card-color);
+  border: 1px solid;
+  border-bottom-color: var(--card-border-dark);
+  border-left-color: var(--card-border-light);
+  border-right-color: var(--card-border-dark);
+  border-top-color: var(--card-border-light);
+  display: flex;
+  height: 350px;
+  width: 700px;
+}
+
+.business-card > .photo {
+  background-image: url('../img/photo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.business-card > .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-card > .text > header {
+  opacity: 0.7;
+  transition: opacity 0.25s;
+}
+
+.business-card > .text > header:hover {
+  opacity: 1.0;
+}
+
+.business-card > .text > main {
+  flex-grow: 1;
+  margin-bottom: auto;
+  padding: 0 15px;
+  text-align: justify;
+}
+
+.business-card > .text > main > h1 {
+  text-align: center;
+}
+
+.business-card > .text > footer {
+  flex-grow: 0;
+}
+
+.business-card > .text > footer > .social {
+  display: flex;
+  justify-content: stretch;
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0 15px;
+  width: 449px;
+}
+
+.business-card > .text > footer > .social > li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.business-card > .text > footer > .social > li + li {
+  margin-left: 1rem;
+}
+
+.business-card > .text > footer > .social > li > a {
+  font-size: 2rem;
+}
+
+.stage {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-height: 350px) {
+  .stage {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .business-card {
+    border: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .business-card > .photo {
+    clip-path: circle(120px);
+    height: 250px;
+    margin: 25px 0;
+    width: 100%;
+  }
+
+  .business-card > .text > header {
+    margin-bottom: 15px;
+    opacity: 1;
+  }
+
+  .business-card > .text > footer > .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .business-card > .text > footer > .social > li {
+    padding: 5px 10px;
+  }
+
+  .business-card > .text > footer > .social > li + li {
+    margin-left: 0;
+  }
+
+  .stage {
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+}
+
+@media (min-height: 900px) {
+  .business-card {
+    margin-bottom: 10%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-border-dark: rgb(155, 155, 155, 0.1);
+    --card-border-light: rgb(155, 155, 155, 0.3);
+    --card-color: #272c30;
+  }
+}

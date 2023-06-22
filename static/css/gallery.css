@@ -1,0 +1,26 @@
+.gallery {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.gallery > a > img {
+  border-radius: 3px;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    padding: 0 25px;
+  }
+
+  .gallery > a > img {
+    border-radius: 10px;
+    max-height: initial;
+    max-width: 100%;
+  }
+}
