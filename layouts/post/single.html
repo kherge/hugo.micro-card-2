@@ -1,0 +1,31 @@
+{{ define "main" }}
+<main>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <article class="col single">
+        <hgroup>
+          {{ if .Title }}
+          <h1>{{ .Title }}</h1>
+          {{ end }}
+          <ul>
+            <li class="published">{{ .Date.Format "Jan 2, 2006" }}</li>
+            <li class="read-time" id="read-time"></li>
+            {{ if gt (len .Params.categories) 0 }}
+            <li class="categories">
+              <ul>
+                {{ range .Params.categories }}
+                <li><a href="{{ .Site.BaseURL }}/categories/{{ . | urlize }}">{{ . }}</a></li>
+                {{ end }}
+              </ul>
+            </li>
+            {{ end }}
+          </ul>
+        </hgroup>
+        <section>
+          {{ .Content }}
+        </section>
+      </article>
+    </div>
+  </div>
+</main>
+{{ end }}

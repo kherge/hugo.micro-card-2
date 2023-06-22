@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <article class="col single">
+        <hgroup>
+          <h1>{{ .Title }}</h1>
+        </hgroup>
+        <section>
+          {{ .Content }}
+        </section>
+      </article>
+    </div>
+  </div>
+</main>
+{{ end }}

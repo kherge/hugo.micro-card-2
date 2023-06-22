@@ -1,0 +1,151 @@
+{{ block "main" . }}
+<div class="stage">
+  <div class="business-card">
+    <div class="photo">
+      <style>
+        .business-card > .photo {
+          background-image: url('https://micro.blog/{{ .Site.Author.username }}/podcast.png');
+        }
+      </style>
+    </div>
+    <div class="text">
+      <header>
+        <nav class="navbar navbar-expand-sm">
+          <div class="container-fluid">
+            <button class="navbar-toggler me-auto ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {{ range .Site.Menus.main }}
+                {{ if .Page.Params.redirect }}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ .Page.Params.redirect }}">{{ .Name }}</a>
+                </li>
+                {{ else }}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h1>{{ .Site.Title }}</h1>
+        <p>{{ .Summary }}</p>
+      </main>
+      <footer>
+        <menu class="social">
+          {{ with .Site.Params.behance }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Behance" aria-label="My Behance profile">
+              <i class="fa-brands fa-behance"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.discord }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Discord" aria-label="My Discord profile">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.dribbble }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Dribbble" aria-label="My Dribbble profile">
+              <i class="fa-brands fa-dribbble"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.facebook }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Facebook" aria-label="My Facebook profile">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          {{ end }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="GitHub" aria-label="My GitHub profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.gitlab }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="GitLab" aria-label="My GitLab profile">
+              <i class="fa-brands fa-gitlab"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.instagram }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Instagram" aria-label="My Instagram profile">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.linkedin }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="LinkedIn" aria-label="My LinkedIn profile">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.mastodon }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Mastodon" aria-label="My Mastodon profile">
+              <i class="fa-brands fa-mastodon"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.soundcloud }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="SoundCloud" aria-label="My SoundCloud profile">
+              <i class="fa-brands fa-soundcloud"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.tiktok }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="TikTok" aria-label="My TikTok profile">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.twitch }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Twitch" aria-label="My Twitch profile">
+              <i class="fa-brands fa-twitch"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.twitter }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Twitter" aria-label="My Twitter profile">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.vimeo }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="Vimeo" aria-label="My Vimeo profile">
+              <i class="fa-brands fa-vimeo"></i>
+            </a>
+          </li>
+          {{ end }}
+          {{ with .Site.Params.youtube }}
+          <li>
+            <a href="{{ . }}" rel="me" target="_blank" title="YouTube" aria-label="My YouTube profile">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          {{ end }}
+        </menu>
+      </footer>
+    </div>
+  </div>
+</div>
+{{ end }}

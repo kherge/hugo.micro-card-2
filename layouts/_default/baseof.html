@@ -1,0 +1,5 @@
+{{ partial "head.html" . }}
+{{ if not .IsHome }}{{ partial "header.html" . }}{{ end }}
+{{ block "main" . }}{{ end }}
+{{ if not .IsHome }}{{ partial "footer.html" . }}{{ end }}
+{{ partial "foot.html" .}}

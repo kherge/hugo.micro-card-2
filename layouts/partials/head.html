@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="{{ .Summary }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}{{ end }}</title>
+    {{ if .RSSLink -}}
+    <link rel="alternate" href="{{ .RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link rel="alternate" href="{{ "podcast.xml" | absURL }}" type="application/rss+xml" title="Podcast" />
+    <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "feed.json" | absURL }}" />
+    <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
+    {{ end -}}
+    <link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="micropub" href="https://micro.blog/micropub" />
+    <link rel="microsub" href="https://micro.blog/microsub" />
+    <link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/base.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/blog.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/business-card.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/gallery.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/single.css" | relURL }}" />
+    <link rel="subscribe" href="https://micro.blog/users/follow" />
+    <link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
+    <link rel="webmention" href="https://micro.blog/webmention" />
+    <script src="{{ "js/media.js" | relURL }}"></script>
+  </head>
+  <body>
