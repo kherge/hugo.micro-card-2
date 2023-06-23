@@ -13,8 +13,8 @@
             {{ if isset .Params "categories" }}
             <li class="categories">
               <ul>
-                {{ range .Params.categories }}
-                <li><a href="{{ .Site.BaseURL }}/categories/{{ . | urlize }}">{{ . }}</a></li>
+                {{ range .Params.categories }} {{ $href := print (absURL "categories/") (urlize .) }}
+                <li><a href="{{ $href }}">{{ . }}</a></li>
                 {{ end }}
               </ul>
             </li>
