@@ -4,7 +4,7 @@
     <div class="photo">
       <style>
         .business-card > .photo {
-          background-image: url('https://micro.blog/{{ .Site.Author.username }}/podcast.png');
+		background-image: url('{{ if .Site.Params.photo }}{{ .Site.Params.photo }}{{ else }}https://micro.blog/{{ .Site.Author.username }}/podcast.png{{ end }}');
         }
       </style>
     </div>
