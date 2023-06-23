@@ -10,7 +10,7 @@
           <ul>
             <li class="published">{{ .Date.Format "Jan 2, 2006" }}</li>
             <li class="read-time" id="read-time"></li>
-            {{ if .Params "categories" }}
+            {{ if isset .Params "categories" }}
             <li class="categories">
               <ul>
                 {{ range .Params.categories }}
