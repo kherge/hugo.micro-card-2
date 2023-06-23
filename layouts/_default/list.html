@@ -8,7 +8,7 @@
           <ol>
             {{ range $paginator.Pages  }}
             <li>
-              <a href="{{ .Permalink }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2006-01-02" }}</time></a>: {{ .Content | truncate 150 }}
+              <a href="{{ .Permalink }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2006-01-02" }}</time></a>: {{ .Content | plainify | truncate 150 }}
             </li>
             {{ end }}
           </ul>
