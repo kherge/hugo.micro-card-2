@@ -4,6 +4,9 @@
 # Allow this list.
 !/.gitignore
 
+# Allow GitHub folder.
+!/.github/
+
 # Allow static assets.
 !/static/
 !/static/**/
