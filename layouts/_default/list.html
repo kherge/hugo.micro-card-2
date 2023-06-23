@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col blog">
+        {{ $paginator := .Paginate (where .Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 25) }}
+        <section class="archive">
+          <ol>
+            {{ range $paginator.Pages  }}
+            <li>
+              <a href="{{ .Permalink }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05-0700" }}">{{ .Date.Format "2006-01-02" }}</time></a>: {{ .Content | truncate 150 }}
+            </li>
+            {{ end }}
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+{{ end }}
