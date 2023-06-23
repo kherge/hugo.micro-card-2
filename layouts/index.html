@@ -35,7 +35,8 @@
       </header>
       <main>
         <h1>{{ .Site.Title }}</h1>
-        <p>{{ .Summary }}</p>
+        {{ $response := getJSON "https://micro.blog/posts/" .Site.Author.username }}
+        <p>{{ $response._microblog.bio }}</p>
       </main>
       <footer>
         <menu class="social">
