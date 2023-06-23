@@ -4,7 +4,7 @@
 <main>
   <div class="gallery">
     {{ range $index, $value := $list }}
-    <a href="{{ .Permalink }}"><img loading="lazy" src="{{ . }}"/></a>
+    <a href="{{ .Permalink }}">{{ range first 1 .Params.photos }}<img src="{{ . }}" loading="lazy"/>{{ end }}</a>
     {{ end }}
   </div>
 </main>
