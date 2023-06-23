@@ -4,6 +4,11 @@
 	"description": "A business card styled theme.",
     "fields": [
         {
+            "field": "params.photo",
+            "label": "Business Card Photo URL",
+            "placeholder": "Your photo URL"
+        },
+        {
             "field": "params.behance",
             "label": "Behance Profile URL",
             "placeholder": "Your Behance profile URL"
