@@ -19,7 +19,7 @@ body {
   width: 100%;
 }
 
-body > footer {
+.stage > footer {
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
@@ -28,22 +28,22 @@ body > footer {
   padding: 1rem;
 }
 
-body > footer > * {
+.stage > footer > * {
   margin: 0;
   padding: 0;
 }
 
-body > header {
+.stage > header {
   flex-grow: 0;
   flex-shrink: 0;
   padding-bottom: 1rem;
 }
 
-body > main {
+.stage > main {
   flex-grow: 1;
   text-align: justify;
 }
 
-body > main > .container-fluid {
+.stage > main > .container-fluid {
   max-width: 700px;
 }
