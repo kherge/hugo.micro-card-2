@@ -4,6 +4,11 @@
 	"description": "A business card styled theme.",
     "fields": [
         {
+            "field": "params.background",
+            "label": "Background Image URL",
+            "placeholder": "The background image URL"
+        },
+        {
             "field": "params.photo",
             "label": "Business Card Photo URL",
             "placeholder": "Your photo URL"
