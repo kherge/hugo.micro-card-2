@@ -1,4 +1,17 @@
 /**
+ * Checks if permanent dark mode is enabled.
+ * 
+ * @return `true` if it is or `false` if not.
+ */
+const isPermaDark = () => {
+  if (typeof PERMA_DARK != 'undefined') {
+    return PERMA_DARK;
+  }
+
+  return false;
+};
+
+/**
  * Modifies an attribute in <html> to toggle dark mode.
  * 
  * Bootstrap does not automatically apply the dark mode color scheme. I believe this is done
@@ -11,7 +24,7 @@
 const toggleDarkMode = isDarkMode => {
   const html = document.documentElement;
 
-  if (isDarkMode || PERMA_DARK) {
+  if (isDarkMode || isPermaDark()) {
     html.setAttribute('data-bs-theme', 'dark');
   } else {
     html.removeAttribute('data-bs-theme');
