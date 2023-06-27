@@ -6,8 +6,17 @@ html, body {
 }
 
 body {
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
+}
+
+.stage {
+  backdrop-filter: blur(5px) brightness(40%);
+  height: 100%;
+  overflow: auto;
+  width: 100%;
 }
 
 body > footer {
