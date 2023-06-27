@@ -3,13 +3,7 @@
 }
 
 .blog, .single {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   padding: 10px 20px 30px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .blog, .single {
-    background: rgba(0, 0, 0, 0.5);
-  }
 }

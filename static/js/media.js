@@ -11,7 +11,7 @@
 const toggleDarkMode = isDarkMode => {
   const html = document.documentElement;
 
-  if (isDarkMode) {
+  if (isDarkMode || PERMA_DARK) {
     html.setAttribute('data-bs-theme', 'dark');
   } else {
     html.removeAttribute('data-bs-theme');
