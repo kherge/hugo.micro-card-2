@@ -29,6 +29,7 @@
     <link rel="webmention" href="https://micro.blog/webmention" />
     <script src="{{ "js/media.js" | relURL }}"></script>
     {{ with .Site.Params.background }}
+    <link rel="stylesheet" href="{{ "css/background.css" | relURL }}" />
     <style>
       body {
         background-image: url('{{ . }}');
