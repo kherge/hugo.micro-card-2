@@ -78,14 +78,13 @@
   font-size: 2rem;
 }
 
-.stage {
+.stage:has(> .business-card) {
   align-items: center;
-  display: flex;
   justify-content: center;
 }
 
 @media (max-height: 350px) {
-  .stage {
+  .stage:has(> .business-card) {
     align-items: flex-start;
   }
 }
@@ -128,7 +127,7 @@
     margin-left: 0;
   }
 
-  .stage {
+  .stage:has(> .business-card) {
     align-items: flex-start;
     justify-content: stretch;
   }
