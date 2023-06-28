@@ -35,9 +35,7 @@ const toggleDarkMode = isDarkMode => {
 const media = window.matchMedia('(prefers-color-scheme: dark)');
 
 // Immediately enable it if the user prefers it.
-if (media.matches) {
-  toggleDarkMode(true);
-}
+toggleDarkMode(media.matches);
 
 // Support manually switching between modes, useful for debugging.
 media.addEventListener('change', event => toggleDarkMode(event.matches));
