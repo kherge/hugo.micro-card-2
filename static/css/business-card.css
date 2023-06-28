@@ -4,6 +4,12 @@
   --card-color: #f7f7f7;
 }
 
+html[data-bs-theme='dark'] {
+  --card-border-dark: rgb(155, 155, 155, 0.1);
+  --card-border-light: rgb(155, 155, 155, 0.3);
+  --card-color: #272c30;
+}
+
 .business-card {
   background-color: var(--card-color);
   border: 1px solid;
