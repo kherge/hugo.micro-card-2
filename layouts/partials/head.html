@@ -27,7 +27,6 @@
     <link rel="subscribe" href="https://micro.blog/users/follow" />
     <link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
     <link rel="webmention" href="https://micro.blog/webmention" />
-    <script src="{{ "js/media.js" | relURL }}"></script>
     {{ with .Site.Params.background }}
     <link rel="stylesheet" href="{{ "css/background.css" | relURL }}" />
     <style>
@@ -39,6 +38,7 @@
       const PERMA_DARK = true;
     </script>
     {{ end }}
+    <script src="{{ "js/media.js" | relURL }}"></script>
   </head>
   <body>
     <div class="stage">
