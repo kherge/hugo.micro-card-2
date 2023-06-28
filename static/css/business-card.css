@@ -84,17 +84,6 @@ html[data-bs-theme='dark'] {
   font-size: 2rem;
 }
 
-.stage:has(> .business-card) {
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-height: 350px) {
-  .stage:has(> .business-card) {
-    align-items: flex-start;
-  }
-}
-
 @media (max-width: 767px) {
   .business-card {
     border: none;
@@ -132,23 +121,10 @@ html[data-bs-theme='dark'] {
   .business-card > .text > footer > .social > li + li {
     margin-left: 0;
   }
-
-  .stage:has(> .business-card) {
-    align-items: flex-start;
-    justify-content: stretch;
-  }
 }
 
 @media (min-height: 900px) {
   .business-card {
     margin-bottom: 10%;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --card-border-dark: rgb(155, 155, 155, 0.1);
-    --card-border-light: rgb(155, 155, 155, 0.3);
-    --card-color: #272c30;
   }
 }

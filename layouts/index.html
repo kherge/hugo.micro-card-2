@@ -5,6 +5,24 @@
       .business-card > .photo {
         background-image: url('{{ if .Site.Params.photo }}{{ .Site.Params.photo }}{{ else }}https://micro.blog/{{ .Site.Author.username }}/podcast.png{{ end }}');
       }
+
+      .stage {
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-height: 350px) {
+        .stage {
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .stage {
+          align-items: flex-start;
+          justify-content: stretch;
+        }
+      }
     </style>
   </div>
   <div class="text">
