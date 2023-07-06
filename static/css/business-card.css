@@ -59,6 +59,7 @@ html[data-bs-theme='dark'] {
 
 .business-card > .text > footer {
   flex-grow: 0;
+  margin: 10px 0;
 }
 
 .business-card > .text > footer > .social {
